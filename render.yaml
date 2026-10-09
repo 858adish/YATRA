@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: yatra-delhi-transit-planner
+    runtime: node
+    buildCommand: node --check server.js
+    startCommand: node -r ./cloud-bind.js server.js
+    healthCheckPath: /api/status
